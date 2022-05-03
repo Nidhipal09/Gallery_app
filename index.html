@@ -1,0 +1,81 @@
+<html>
+    <head>
+        <title>
+            Camera gallery app
+        </title>
+        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    </head>
+    <body>
+        <div id="action-bar">
+            <span class="material-icons" id="saveAlbum">save</span>
+            <span class="material-icons" id="addAlbum">add</span>
+            <span class="material-icons" id="deleteAlbum">delete</span>
+            <span class="material-icons" id="downloadAlbum">download</span>
+            <span class="material-icons" id="uploadAlbum">upload</span>
+            <span class="material-icons" id="playAlbum">play_arrow</span>
+            <select id="selectAlbum">
+                <option value="-1">Select an album</option>
+            </select>
+            <input type="file" multiple="false" id="uploadAlbumInput" />
+        </div>
+        <div id="content">
+            <div id="content-list">
+                <div id="new-image">New image</div>
+                <div id="images-list">
+                </div>
+            </div>
+            <div id="content-details">
+                <div id="create-image">
+                    <div>
+                        <input id="slideTitle" type="text" placeholder="Title"/>
+                    </div>
+                    <div>
+                        <textarea id="slideDescription" placeholder="Description"></textarea>
+                    </div>
+                    <div>
+                        <input id="slideImg" type="text" placeholder="Image url"/>
+                    </div>
+                    <div>
+                        <button id="slideSave" id="save">Save</button>
+                    </div>
+                </div>
+                <div id="show-image"></div>
+                <div id="content-details-overlay">
+                    <div id="content-details-overlay-text">Add an image or choose an image</div>
+                </div>
+            </div>
+            
+            <div id="overlay">
+                <div id="overlay-text">Please select an album</div>
+            </div>
+            <div id="play-overlay"><span id="play-overlay-text"></span></div>
+        </div>
+        
+
+        <template id="templates">
+             <option for="new-album" value=""></option>
+             <div class="slide">
+                 <div class="slide-title"></div>
+                 <div class="slide-content">
+                     <div class="slide-des"></div>
+                     <div class="slide-img"><img src="" alt=""></div>
+                 </div>
+             </div>
+             <div class="slideView">
+                 <div class="slide-header">
+                       <div class="slide-title"></div>
+                       <div class="slide-actions">
+                            <span class="material-icons" for="editSlide">edit</span>
+                            <span class="material-icons" for="deleteSlide">delete</span>
+                       </div>
+                 </div>
+                <div class="slide-content">
+                    <div class="slide-des"></div>
+                    <div class="slide-img"><img src="" alt=""></div>
+                </div>
+            </div>
+        </template>
+        <script type="text/javascript" src="main.js"></script>
+    </body>
+</html>
